@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body id="bodyPart">
+       <div class="d-grid gap-2 col-6 mx-auto">
+           <button class="btn btn-primary" type="button" id="redBtn" style="background-color: red">red</button>
+           <button class="btn btn-primary" type="button" id="blueBtn" style="background-color: blue">blue</button>
+           <button class="btn btn-primary" type="button" id="pinkBtn" style="background-color:pink">pink</button>
+           <button class="btn btn-primary" type="button" id="greenBtn" style ="background-color: green">green</button>
+           <button class="btn btn-primary" type="button" id="yellowBtn" style="background-color: yellow">yellow</button>
+           <button class="btn btn-primary" type="button" id="goldBtn" style="background-color:gold">golden</button>
+      </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      let body=document.getElementById("bodyPart")
+      let redBtn = document.getElementById('redBtn'); 
+      let blueBtn = document.getElementById('blueBtn');
+      let pinkBtn = document.getElementById('pinkBtn');
+      let greenBtn = document.getElementById('greenBtn');
+      let yellowBtn = document.getElementById('yellowBtn');
+      let goldBtn = document.getElementById('goldBtn');
+          redBtn.addEventListener('click',()=>{
+            body.style.backgroundColor = "red";
+            redBtn.innerHTML="<h1>Red</h1>";
+          });
+          blueBtn.addEventListener('click',()=>{
+            blueBtn.innerHTML="<h1>Blue</h1>";
+            body.style.backgroundColor = "blue";
+          }); 
+          pinkBtn.addEventListener('click',()=>{
+            pinkBtn.innerHTML="<h1>Pink</h1>";
+            body.style.backgroundColor = "pink";
+
+          });
+          greenBtn.addEventListener('click',()=>{
+            greenBtn.innerHTML="<h1>Green</h1>";
+            body.style.backgroundColor = "green";
+          });
+          yellowBtn.addEventListener('click',()=>{
+            yellowBtn.innerHTML = "<h1>Yellow</h1>";
+            body.style.backgroundColor = "yellow";
+          });
+          goldBtn.addEventListener('click',()=>{
+            goldBtn.innerHTML = "<h1>Gold</h1>";
+            body.style.backgroundColor = "gold";
+          });
+
+
+
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

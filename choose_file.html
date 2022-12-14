@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		How to check input file is empty
+		or not using JavaScript?
+	</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+			background-color: purple;
+			color: white;
+    }
+    #up{
+    	font-size: 30px;
+    }
+    #file{
+    	   box-shadow: 5px;
+    	   background-color: green;
+    	   font-size: 20px;
+
+    }
+    #cl_Btn{
+    	   font-size: 20px;
+    	   background-color: skyblue;
+    }
+    #dwn{
+    	 font-size: 25px;
+    	 
+    }
+	</style>
+
+</head>
+<body>
+  <h1 style = "color:white;">
+		GeeksForGeeks
+  </h1>
+  <p id="up"></p>
+  <input type="file" name="file" id="file">
+  <button id="cl_Btn">click Me</button>
+  <p id="dwn"></p>
+  <script type="text/javascript">
+  	let up=document.getElementById("up");
+  	let dwn=document.getElementById("dwn");
+  	let btn=document.getElementById("cl_Btn");
+  	   up.innerHTML="Click on the button to see"+" if any  is selecte"
+  	   btn.addEventListener("click",()=>{
+  	   	   if(file.files.length==0){
+  	   	   	   dwn.innerHTML="no file selected";
+  	   	   }
+  	   	   else{
+  	   	   	dwn.innerHTML="some file is selected";
+  	   	   }
+
+  	   })
+
+  	
+  </script>
+
+</body>	
+</html>

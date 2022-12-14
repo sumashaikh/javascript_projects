@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Count the word length</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+			background-color: purple
+		}
+		button{
+			  top:396px;
+			  position: absolute;
+			  bottom: 325px;
+			  border:1px;
+			  font-size: 20px;
+			  padding:36px;
+			  padding-top: 14px;
+			  background-color: chocolate;
+			  background: bisque; 
+			  margin-left: -200px;
+		}
+		#input{
+			font-size: 41px;
+			border-width: thick;
+			color: green;
+			border-color: palegreen;
+
+		}
+
+	</style>
+</head>
+
+<body>
+
+<h1 style="color: white">Type a Word In Box</h1>
+<textarea id="input"></textarea>
+<h1 id="demo" style="color: white; font-size: 50px;"></h1>
+<br>
+
+<button onclick="myFunction()">Click To Calculate Word Length</button>
+<script>
+function myFunction() {
+  let input= document.getElementById("input").value;
+  var n = input.length;
+  document.getElementById("demo").innerHTML = n;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document</title>
+<style type="text/css">
+  #main{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+  }
+  #Login{
+        position: absolute;
+        top: 100%;
+        left: 30%;
+  }
+  #new{
+        position: absolute;
+        top: 100%;
+        left: 30%;
+  }
+  
+</style>
+</head>
+<body>
+<div id="main">
+    <label><b>Username</b></label>
+    <br>
+    <input type="text" placeholder="Enter Username" id="username" required>
+    <br>
+    <label><b>Password</b></label>
+    <br>
+    <input type="password" placeholder="Enter Password" id="password" required>
+    <br>
+    <button id="Login">Login</button>
+    <br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <h5 id="new"><a href="Registration_Form.html">Create New Account</a></h5>
+    <p id="p1"></p>
+    <p id="p2"></p>
+  </div>
+  <script type="text/javascript">
+    let username=document.getElementById('username');
+    let p1=document.getElementById('p1');
+    let p2=document.getElementById('p2');
+    let login=document.getElementById('Login');
+    login.addEventListener("click",()=>
+    {
+      let mis=localStorage.getItem(username.value);
+      if (mis==null) {
+        p1.style.color='red';
+        p1.innerHTML='Enter valid user name';
+      }
+      else{
+        myobj=JSON.parse(mis);
+        let flag=0;
+        myobj.forEach((ele)=>{
+          let password1=document.getElementById('password').value;
+          let name=(ele.username).toString();
+          let password=(ele.password).toString();
+          if(name==username.value&&password==password1){
+            flag=1;
+            p1.style.color='green';
+            p1.innerHTML='you have been sucessfully login';
+            p2.innerHTML="<br><br><h3> your data:</h3><p>Name:",$name;
+          }
+        
+          if(flag==0){
+              p1.style.color='red';
+              p1.innerHTML='Enter The Valid Password'
+              p2.innerHTML='';
+          }
+        });  
+    }
+  });  
+
+</script>  
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript essential program</title>
+</head>
+<body>
+    <p>say what?<input type="text" id="sayThis" size="40"></p>
+    <p>how many times?
+       <select id="howMany">
+    	   <option value="1">1</option>
+    	   <option value="5" selected>5</option>
+    	   <option value="10">10</option>
+    	   <option value="20">20</option>
+       </select>
+    </p>
+    <p><button onclick="doLoop()">Do It!</button></p>
+    <p><div id="result"></div></p>
+<script type="text/javascript">
+	function doLoop(){
+		var sayWhat=document.getElementById('sayThis').value;
+		var maxLoop=document.getElementById('howMany').value;
+		var str='';
+		for (var i=1;i<=maxLoop;i++)
+		{
+			str=str+i+'+'+sayWhat+'<br>';
+		}
+		document.getElementById("result").innerHTML=str;
+	}
+</script>    
+</body>
+</html>

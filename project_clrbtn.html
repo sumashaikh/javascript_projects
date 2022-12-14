@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document</title>
+<style type="text/css">
+  #logform{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#signup{
+  position: absolute;
+  top: 210px;
+  left: 40%;
+}
+</style>
+</head>
+<body>
+  <div id="logform">
+    <label>Name</label>
+      <input type="text" id="name" placeholder="Enter Name"><br><br>
+    <label>Email Id</label>
+      <input type="text" id="email" placeholder="Enter your Email Id"><br><br>
+    <label>User Name</label>  
+      <input type="" id="username" placeholder="Enter your Username"><br><br>
+    <label>Password</label>  
+      <input type="password" id="password" placeholder="Enter your Password"><br><br>
+     <button id="signup">SIGNUP</button> 
+     <h5><a href="login.html">Go to login page</a> </h5>
+  </div>
+<script type="text/javascript">
+  let name=document.getElementById('name');
+  let email=document.getElementById('email');
+  let username=document.getElementById('username');
+  let password=document.getElementById('password');
+  let signup=document.getElementById('signup');
+  signup.addEventListener("click",()=>{
+    let myobj=[];
+    let obj={
+      name:name.value,
+      email:email.value,
+      username:username.value,
+      password:password.value
+    }
+    myobj.push(obj);
+    localStorage.setItem(username.value,JSON.stringify(myobj));
+    name.value="";
+    email.value="";
+    username.value="";
+    password.value="";
+  })
+</script>  
+</body>

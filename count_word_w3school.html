@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math Random Addition_Project</title>
+	<style type="text/css">
+		body{
+			 text-align: center;
+			 background-color: purple;
+			 position: absolute;
+			 top:225px;
+		}
+		#input1{
+			   position: absolute;
+			   border: 1px solid;
+			   padding:22px;
+			   top:60px;
+			   margin-left: 309px;
+			   background-color: green;
+			   color: white;
+			   border: aqua;
+			   font-size: 19px;
+		}
+		#input2{
+			   position: absolute;
+			   border: 1px solid;
+			   padding:22px;
+			   top:60px;
+			   margin-left: 426px;
+			   color: white;
+			   border: aqua;
+			   font-size: 19px;
+			   background-color: green;
+		}
+		#add{
+			   position: absolute;
+			   border: 1px solid;
+			   padding:22px;
+			   top:60px;
+			   margin-left: 369px;
+			   color: white;
+			   border: aqua;
+			   font-size: 19px;
+			   background-color: green;
+		}
+		#equal{
+			   position: absolute;
+			   border: 1px solid;
+			   padding:22px;
+			   top:60px;
+			   margin-left: 489px;
+			   color: white;
+			   border: aqua;
+			   font-size: 19px;
+			   background-color: green;
+		}
+		#guess{
+			   position: absolute;
+			   margin-left:191px;
+			   top:64px;
+			   padding: 19px;
+			   background-color: skyblue;
+		}
+		#btn{
+			   position: absolute;
+			   margin-left: 415px;
+			   padding: 19px;
+			   top:60px;
+			   background-color: yellow;
+			   color: green;
+			   border:aqua;
+		}
+		#heading{
+			     text-align: center;
+			     top:-159px;
+			     margin-left: 374px;
+			     position: relative;
+			     color: white;
+		}
+	</style>
+
+</head>	
+
+<body>
+<div id="heading"> 
+     <h1>Addition Of Two Number</h1>
+</div>
+<div id="input1"></div>
+<div id="add">+</div>
+<div id="input2"></div>
+<div id="equal">=</div>
+
+<div>
+	<input type="number" id="guess">
+</div>
+<div>
+	<button id="btn">check</button>
+</div>	
+
+<br>
+
+
+<script>
+	let input1=document.getElementById("input1").innerHTML=parseInt(Math.random()*10);
+	let input2=document.getElementById("input2").innerHTML=parseInt(Math.random()*10);
+	let btn=document.getElementById("btn");
+	var result=input1+input2;
+	    btn.addEventListener("click",()=>{
+              
+              let guess = document.getElementById('guess').value;
+              guess = Number(guess);
+	    	 if (guess===result){
+	    	 	alert("correct");
+	    	 	window.location.reload();
+
+	    	 }
+	    	 else{
+	    	 	alert("incorrect");
+	    	 	window.location.reload();
+	    	 }
+	    	 console.log(guess);
+
+
+
+	    })
+	console.log(input1);
+</script>
+
+</body>
+</html>

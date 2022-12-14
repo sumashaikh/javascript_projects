@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="create_list">
+	<ul id="myList">
+	</ul>	
+</div>
+<script type="text/javascript">
+let data = ['sumayya','nahid','arshad','heena'];
+let myList = document.getElementById("myList");
+data.forEach((e)=>{
+let li=document.createElement("li");
+li.innerText=e;
+myList.appendChild(li);
+});
+
+
+</script>	
+
+</body>
+</html>	

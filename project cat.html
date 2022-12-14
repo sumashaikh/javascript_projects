@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	 <style type="text/css">
+	 	.conta{
+	 		border-style: solid;
+	 		text-align: center;
+	 		margin: 80px;
+
+	 	}
+	 	#gap2{
+	 		      border: 408px solid;
+                  text-align: center;
+                  border-color: blue;
+                  position: absolute;
+                  padding: 12px;
+                  border-block-width: thin;
+                  border-height: 51px;
+                  margin-right: -2px;
+                  position: relative;
+                  left: 69px;
+                  top: -77px;
+
+	 	}
+	 	#neElemnt{
+	 			 		border-style: solid;
+	 		            text-align: center;
+
+
+	 	}
+	 	#box1{
+	 		      padding: 48px;
+                 border: 1px solid #ddd;
+                 border-radius: 4px;
+                 padding: -21px;
+                 width: 150px;
+	 	}
+	 	#img2{
+	 		    height: 45%;
+                width: 250% height=50%;
+                position: absolute;
+                height: 42%;
+                left: 44%;
+                top: 64%;
+                height: -36%;
+	 	}
+	 	#img3{
+	 		    width: 50% height=50%;
+                position: absolute;
+                width: 20%;
+                height: 41%;
+                top: 65%;
+                right: 5%;
+	 	     }
+
+	 </style>
+
+</head>
+<body>
+	 <div id="creAge" class="conta">
+	 	<h1>Create Age</h1>
+	 	
+	 </div>
+     <div class="d-grid gap-2 d-md-block" id="gap2">
+       <button class="btn btn-primary" type="button" id="ageBtn" onclick="fun1()">Click Me</button>
+       <button class="btn btn-danger" type="button" id="rBtn" onclick="fun2()">Reset</button>
+     </div>
+     <div id="creAge" class="conta">
+     	<h1>Creation of cat</h1>
+        <button class="btn btn-primary" type="button" id="ageBtn" onclick="rpsGame()">Create</button>
+     	<div id="box1">
+     		<img src="light_on.jpg" id="img1" style="width: 250% height=100%">
+     		<img src="light_off.jpg" id="img2" style="width: 250% height=50%">
+     		<img src="IMG-20200119-WA0017.jpg"id="img3"style="width: 50% height=50%">
+     		  
+        </div>
+
+     </div>
+     
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function fun1(){
+			var age=prompt("Enter your birth Year");
+			var addAge=(2021-age)*365;
+			var elH=document.createElement("h1");
+			elH.innerHTML="Your Age Is"+" "+addAge;
+			document.getElementById("neElemnt").appendChild(elH);
+
+		}
+		function fun2(){
+			document.getElementById("neElemnt").remove();
+		}
+		function catgen(){
+			var img=document.createElement("img");
+			 img.src="http://thecatapi.com/api/images/get?format=src&type=gif";
+			 document.getElementById("box1").appendChild(img);
+
+		}
+//challenge 2
+        function rpsGame(yourChoice)
+        {
+        	console.log(yourChoice);
+        	var humanChoice,botChoice;
+       	    humanChoice=yourChoice.id;
+        	botChoice=numberToChoice(randToRpsInt());
+        	console.log('computer choice:',botChoice);
+
+        }
+        function randToRpsInt(){
+        	return Math.floor(Math.random()*3);
+        }
+        function numberToChoice(number){
+        	return ['img1','img2','img3'][number];
+        }
+        function decideWinner(yourChoice,computerChoice)
+        {
+        	var rpsDatabase = {
+        		'img1':{'img3':1,'img1':0.5,'img2':0},
+        		'img2':{'img1':1,'img2':0.5,'img3':0},
+        		'img3':{'img2':1,'img3':0.5,'img2':0}
+
+        	};
+        	var YourScore=rpsDatabase[yourChoice][computerChoice];
+        	var compterScore=rpsDatabase[computerChoice][yourChoice];
+        	return [YourScore,compterScore];
+
+        }		
+
+
+	</script>
+
+
+
+</body>
+</html>

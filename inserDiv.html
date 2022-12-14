@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        body{
+            background-color:pink;
+            text-align: center;
+            font-size: 60px; 
+        }
+    </style>
+</head>
+<body>
+ <div id="myDiv">
+    hello
+ </div>
+ <script type="text/javascript">
+    window.onload=function(){
+        document.getElementById("myDiv").onclick=addDiv;
+    }
+    function addDiv(){
+        let parent = this.parentNode;
+        let newDiv=document.createElement("div");
+          newDiv.className="myDiv2";
+          newDiv.innerHTML="Sumayya";
+
+       parent.insertBefore(newDiv,this);
+
+    }
+ </script>   
+
+</body>
+</html>

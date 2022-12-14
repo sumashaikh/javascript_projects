@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Quotes</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		button {
+                 background-color: blue;
+                 color: white;
+                 border: 2px solid;
+                 padding: 23px;
+                 font-size: 30px;
+                 padding-left: 87px;
+                 padding-right: 87px;
+                }
+
+		button:hover{
+
+              background-color:green;
+              color: white;
+
+
+		}
+		#nameQuotes{
+			font-size:30px;
+			font-weight: normal;
+
+		}
+		#authorQuotes{
+			font-size:30px;
+			font-weight: normal;
+
+		}
+		
+	</style>
+	
+</head>
+<body>
+   <div>
+   	<h1>Quote of the Day</h1>
+   </div>
+   <div>
+   	<h2>Press the button below to recieve a random quote!</h2>
+   </div>
+   <div>
+   	<button id="btnClick">New Quotes</button>
+   </div>
+   <div><span id="nameQuotes"></span>
+   </div>
+   <br>
+   <div><span id="authorQuotes"></span></div>
+
+   <script type="text/javascript">
+   	const Quotes = [
+    {author: '--Jim Rohn', 
+     quote: 'Beware of what you become in pursuit of what you want.'
+    },
+    {author: '--Epictetus', 
+     quote: 'It\'s not what happens to you, but how you react to it that matters.'
+    },
+    {author: '--Frank Sinatra', 
+     quote: 'The best revenge is massive success.'
+    },
+    {author: '--Wayne Gretzy', 
+     quote: 'You miss 100% of the shots you don\'t take.'
+    },
+    {author: '--Nelson Mandela', 
+     quote: 'Resentment is like drinking poison and waiting for your enemies to die.'
+    },
+    {author: '--Elbert Hubbard', 
+     quote: 'Do not take life too seriously. You will not get out alive.'
+    },
+];
+    let btnClick=document.getElementById("btnClick");
+    let nameQuotes=document.getElementById("nameQuotes");
+    let authorQuotes=document.getElementById("authorQuotes");
+
+   	    btnClick.addEventListener("click",()=>{
+   	    	     let rand =Math.floor(Math.random()*Quotes.length);
+   	    	     nameQuotes.innerHTML=Quotes[rand].quote;
+                 authorQuotes.innerHTML=Quotes[rand].author;
+
+
+   	    });
+   </script>
+	
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color: pink;
+			text-align: center;
+			font-size: 35px;
+		}
+		.close{
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Add Something</h1>
+	</div>
+	<div>
+	   <input type="text" name="text" id="textInsert">
+	   <button id="add">Add</button>
+	</div>
+	<div>
+		<ul id="text_insert">
+			<button>Delete</button>
+		</ul>
+		
+	</div>
+<script type="text/javascript">
+	
+	let  addElement=document.getElementById("add");
+	     addElement.addEventListener("click",()=>{
+	 	 let node= document.createElement("Li");
+	 	 let  tex=document.getElementById("textInsert").value;
+	 	 var textnode=document.createTextNode(tex);
+          node.appendChild(textnode);
+         document.getElementById("text_insert").appendChild(node);
+           var span = document.createElement("SPAN");
+           var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          node.appendChild(span);
+          node.setAttribute("onclick", "remove(this)");
+
+         
+});
+	     function remove(el) {
+             var element = el;
+             element.remove();
+}
+
+
+	     
+
+</script>	
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>File_Uploaded</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		#Customer_button{
+			background-color: green;
+			color:  white;
+			padding: 18px;
+
+		}
+		#FileName{
+			margin-left: 10px;
+			font-family: sans-serif;
+			color: #aaa; 
+		}
+
+		
+	</style>
+</head>
+<body>
+	<h1>Upload The File</h1>
+	  <div class="upoadFile">
+	     <input type="file" name="file" id="real_file" hidden="hidden" />
+	     <button id="Customer_button">ChooseFile</button>
+	     <span id="FileName">no choose file</span> 
+      </div>
+<script type="text/javascript">
+	RealFile=document.getElementById("real_file");
+	CustomerBtn=document.getElementById("Customer_button");
+	FileName=document.getElementById("FileName");
+	CustomerBtn.addEventListener("click",function(){
+		RealFile.click();
+	});
+	RealFile.addEventListener("change",function(){
+		if(RealFile.value)
+		{
+			FileName.innerHTML=RealFile.value.replace(/^.*[\\\/]/, '')
+
+		}
+		else{
+			FileName.innerHTML="NoFileUploaded"
+		}
+
+		  
+	});
+		
+	
+</script>
+
+
+</body>
+</html>

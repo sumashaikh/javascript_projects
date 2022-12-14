@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading"> Welcome to Code With Harry</h1>
+        <div id="myfirst" class="child red good">child 1
+
+            <ul class="this">
+                <li class="childul">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="button" value="submit">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+ <script>
+/*    
+    let myVar;
+    myVar=String(34);
+       console.log(myVar,(typeof myVar));
+     let boolenVar=String(true);
+       console.log(boolenVar,(typeof boolenVar)); 
+     let date=String(new Date());
+       console.log(date ,(typeof date));
+    let arr= String([1,2,3,4,5]);
+     console.log(arr,arr.length,(typeof arr));
+    let i=75;
+    console.log(i.toString(),(typeof i));
+*/
+let res;
+//string to number
+res= Number('100');
+console.log(res,(typeof res));
+//boolean to number
+res=Number(false);
+console.log(res,(typeof res));
+res=Number(true);
+console.log(res,(typeof res));
+res=Number('hello');
+console.log(res)
+
+//Boolean Conversion 
+res =Boolean(1);
+console.log(res);
+res=Boolean(0);
+console.log(res);
+res=Boolean("summa");
+console.log(res);
+res=Boolean("");
+console.log(res);
+
+let rep;
+let a=90;
+rep=String(a);
+String(788399);
+console.log(rep,(typeof rep));
+
+//ParseInt and ParseFloat
+console.log(parseInt(4.7));
+console.log(parseInt(4.7 * 1e22, 10));        // Very large number becomes 4
+console.log(parseInt(0.00000000000434, 10));  // Very small number becomes 4
+
+//Methods and String Properties
+/*
+const name="sumayya";
+const greeting="good morning";
+console.log(name+' '+greeting);
+let html;
+html ="<h1>hi i m</h1>"+"<p>Now i m back</p>";
+html = html.concat('this', ' str2');
+console.log(html);
+console.log(html.length);
+console.log(html.toLowerCase());
+console.log(html.toUpperCase());
+console.log(html);
+console.log(html.indexOf(0));
+console.log(html.indexOf('<'));
+console.log(html.indexOf('>'));
+console.log(html.charAt(3));
+console.log(html.charAt(5));
+console.log(html.endsWith('dfsddd'));
+console.log(html.endsWith('str2'));
+console.log(html.includes('fg'));
+console.log(html.includes('back'));
+console.log(html.substring(1,6));
+console.log(html.slice(0,4));
+*/
+let fruit1 ='orange';
+let fruit2 ="Apple";
+let html=`hello ${name}
+          <h1>This is my heading</h1>
+          <p>you Like ${fruit1} and ${fruit2} </p>`;
+document.body.innerHTML= html;          
+
+
+
+      
+ </script>   
+</body>
+</html>
